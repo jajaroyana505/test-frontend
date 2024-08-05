@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layered Layout</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+    }
+
+    .layer {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .layer1 {
+      background-color: rgba(255, 0, 0, 0.7);
+      z-index: 1;
+      top: 50px;
+      left: 50px;
+    }
+
+    .layer2 {
+      background-color: rgba(0, 255, 0, 0.7);
+      z-index: 2;
+      top: 100px;
+      left: 100px;
+    }
+
+    .layer3 {
+      background-color: rgba(0, 0, 255, 0.7);
+      z-index: 3;
+      top: 150px;
+      left: 150px;
+    }
+  </style>
+  <body>
+    <div class="layer layer1">Layer 1</div>
+    <div class="layer layer2">Layer 2</div>
+    <div class="layer layer3">Layer 3</div>
+  </body>
+</html>
